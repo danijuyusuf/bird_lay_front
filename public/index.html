@@ -3,6 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>LO Farms | Nest</title>
+    <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDEyuZ1FqIjjVRherabWvMkOG6lD8Hp5y0",
+        authDomain: "radiant-torch-1705.firebaseapp.com",
+        databaseURL: "https://radiant-torch-1705.firebaseio.com",
+        storageBucket: "",
+        messagingSenderId: "873509744762"
+      };
+      firebase.initializeApp(config);
+    </script>
     <link rel="manifest" href="manifest.json">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Nest">
@@ -13,7 +25,7 @@
     <script src="bower_components/web-animations-js/web-animations.min.js"></script>
     <link rel="import" href="bower_components/platinum-sw/platinum-sw-elements.html">
     <link rel="import" href="bower_components/polymerfire/firebase-app.html">
-    <link rel="import" href="note-app.html">
+    <link rel="import" href="nest-app.html">
     <style media="screen">
       body {
         margin: 0;
@@ -25,5 +37,13 @@
       href="sw-import.js">
       <platinum-sw-cache default-cache-strategy="networkFirst"></platinum-sw-cache>
     </platinum-sw-register>
+    <firebase-app
+      name="nest"
+      api-key="AIzaSyDEyuZ1FqIjjVRherabWvMkOG6lD8Hp5y0"
+      auth-domain="radiant-torch-1705.firebaseapp.com"
+      database-url="https://radiant-torch-1705.firebaseio.com">
+    </firebase-app>
+
+    <nest-app></nest-app>
   </body>
 </html>
